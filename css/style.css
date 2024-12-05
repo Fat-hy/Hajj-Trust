@@ -781,7 +781,7 @@ strong {
   NEWS         
 -----------------------------------------*/
 .news-detail-header-section {
-  background-image: url('../images/news/close-up-volunteer-oganizing-stuff-donation.jpg');
+  background-image: url('../img/call-bg.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1786,11 +1786,7 @@ blockquote::before {
 /* End Hero Section */
 
 /* FAQ */
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
+
 
 .clearfix:after {
   visibility: hidden;
@@ -1988,28 +1984,36 @@ blockquote::before {
 
 .card-title {
   color: var(--secondary-color);
-
-
 }
 
-/* Footer*/
 
-
-/* Ensure contact information text is white */
-.site-footer .text-white,
-.site-footer p {
-  color: #ffffff !important;
-  /* Forces white color for text */
+/* Footer  */
+.site-footer-title {
+  color: var(--white-color);
+  /* Ensures the title text is white */
 }
 
-/* Hover effect for contact links */
-.site-footer a.text-decoration-none:hover {
+.col-lg-3 p {
+  color: var(--white-color);
+  /* Default text color */
+  transition: color 0.3s ease;
+  /* Smooth hover effect */
+}
+
+.col-lg-3 p:hover {
   color: var(--primary-color);
-  /* Replace with the color variable or hex code */
-  text-decoration: underline;
-  /* Optional for better visual feedback */
+  /* Change text color to primary on hover */
 }
 
+.col-lg-3 p a {
+  color: var(--white-color);
+  /* Default link color */
+  text-decoration: none;
+}
 
+.col-lg-3 p a:hover {
+  color: var(--primary-color);
+  /* Change link color to primary on hover */
+}
 
 /* Adjusted  CSS  End*/
