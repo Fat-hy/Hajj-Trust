@@ -2016,6 +2016,8 @@ blockquote::before {
   /* Change link color to primary on hover */
 }
 
+/* Pricing Section Begins */
+
 /* Pricing Section and Container */
 .pricing-section {
   display: flex;
@@ -2040,11 +2042,8 @@ blockquote::before {
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background: #fff;
-
-  /* Ensure equal width and height */
-  height: 300px;
-  /* Fixed height */
+  background: var(--secondary-color);
+  min-height: 350px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2056,24 +2055,19 @@ blockquote::before {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.pricing-box h3 {
-  font-size: 1.5rem;
-  margin: 0 0 10px;
-  color: #fff;
+/* Header, Price, Validity, and Button Styles */
+.pricing-box h3,
+.pricing-box .price,
+.pricing-box .validity {
+  color: var(--border-color);
+  /* Default text color for all boxes */
 }
 
 .pricing-box .price {
   font-size: 2rem;
   font-weight: bold;
-  color: #fff;
+  color: var(--white-color);
   margin: 10px 0;
-}
-
-.pricing-box .validity {
-  font-size: 0.875rem;
-  color: #f0f0f0;
-  margin-bottom: 20px;
-  text-align: center;
 }
 
 .pricing-box button {
@@ -2082,31 +2076,31 @@ blockquote::before {
   border-radius: 50px;
   padding: 10px 20px;
   border: none;
-  color: #fff;
-  background: rgba(255, 255, 255, 0.2);
+  color: var(--white-color);
+  background: rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
 .pricing-box button:hover {
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(0, 0, 0, 0.2);
 }
 
-/* Colors for Pricing Tiers */
-.p-green {
-  background: #4c7737;
-}
-
-.p-yel {
-  background: #ffbb42;
-}
-
+/* Standard Price Box with Primary Color */
 .p-red {
-  background: #e13c4c;
+  background: var(--primary-color);
 }
 
-.p-blue {
-  background: #3f4bb8;
+.p-red h3,
+.p-red .price,
+.p-red .validity,
+.p-red button {
+  color: #fff;
+  /* Ensure text and button contrast */
+}
+
+.p-red button:hover {
+  background: rgba(255, 255, 255, 0.4);
 }
 
 /* Adjusted  CSS  End*/
