@@ -1,0 +1,15 @@
+# Enable mod_rewrite
+RewriteEngine On
+
+# Force HTTPS if it's not already enforced
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redirect .html URLs to friendly URLs
+RewriteCond %{THE_REQUEST} \s/([^.]+)\.html [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# Serve friendly URLs by rewriting them to .html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-zA-Z0-9_-]+)$ $1.html [L]
