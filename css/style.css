@@ -668,13 +668,13 @@ strong {
 /*---------------------------------------
   ABOUT              
 -----------------------------------------*/
-.about-section {
+./about-section {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-.about-image {
+./about-image {
   border-radius: var(--border-radius-medium);
   display: block;
   width: 350px;
@@ -1062,21 +1062,21 @@ blockquote::before {
 /*---------------------------------------
   CONTACT               
 -----------------------------------------*/
-.contact-section {
+./contact-section {
   background: var(--white-color);
 }
 
-.contact-form {
+./contact-form {
   background: var(--section-bg-color);
   border-radius: var(--border-radius-small);
   padding: 40px;
 }
 
-.contact-info-wrap {
+./contact-info-wrap {
   padding-top: 40px;
 }
 
-.contact-image-wrap {
+./contact-image-wrap {
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   margin-top: 20px;
   margin-bottom: 30px;
@@ -1228,7 +1228,7 @@ blockquote::before {
 /*---------------------------------------
   CONTACT SEARCH & DONATE & SUBCRIBE FORM              
 -----------------------------------------*/
-.contact-form .form-control {
+./contact-form .form-control {
   background: var(--white-color);
 }
 
@@ -1533,7 +1533,7 @@ blockquote::before {
     padding: 70px 30px 30px 30px;
   }
 
-  .about-image {
+  ./about-image {
     width: inherit;
     height: 450px;
   }
@@ -1558,7 +1558,7 @@ blockquote::before {
     font-size: var(--h2-font-size);
   }
 
-  .contact-info-wrap {
+  ./contact-info-wrap {
     padding-top: 0;
   }
 
