@@ -1,4 +1,4 @@
-// New JS
+// FAQ Accordion JS
 document.addEventListener("DOMContentLoaded", () => {
   const headers = document.querySelectorAll(".dropdown-container header");
 
