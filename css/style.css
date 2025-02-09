@@ -1,35 +1,34 @@
 @font-face {
-  font-family: 'Metropolis';
-  src: url('../fonts/Metropolis/Metropolis-Regular.woff2') format('woff2'),
-    url('../fonts/Metropolis/Metropolis-Regular.woff') format('woff');
+  font-family: "Metropolis";
+  src: url("../fonts/Metropolis/Metropolis-Regular.woff2") format("woff2"),
+    url("../fonts/Metropolis/Metropolis-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
-
 @font-face {
-  font-family: 'Metropolis';
-  src: url('../fonts/Metropolis/Metropolis-Light.woff2') format('woff2'),
-    url('../fonts/Metropolis/Metropolis-Light.woff') format('woff');
+  font-family: "Metropolis";
+  src: url("../fonts/Metropolis/Metropolis-Light.woff2") format("woff2"),
+    url("../fonts/Metropolis/Metropolis-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Metropolis';
-  src: url('../fonts/Metropolis/Metropolis-SemiBold.woff2') format('woff2'),
-    url('../fonts/Metropolis/Metropolis-SemiBold.woff') format('woff');
+  font-family: "Metropolis";
+  src: url("../fonts/Metropolis/Metropolis-SemiBold.woff2") format("woff2"),
+    url("../fonts/Metropolis/Metropolis-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Metropolis';
-  src: url('../fonts/Metropolis/Metropolis-Bold.woff2') format('woff2'),
-    url('../fonts/Metropolis/Metropolis-Bold.woff') format('woff');
+  font-family: "Metropolis";
+  src: url("../fonts/Metropolis/Metropolis-Bold.woff2") format("woff2"),
+    url("../fonts/Metropolis/Metropolis-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -47,17 +46,17 @@
 -----------------------------------------*/
 :root {
   --white-color: #ffffff;
-  --primary-color: #5bc1ac;
+  --primary-color: #38805c;
   --secondary-color: #5a6f80;
   --section-bg-color: #f0f8ff;
   --site-footer-bg-color: #44525d;
   --custom-btn-bg-color: #597081;
-  --custom-btn-bg-hover-color: #5bc1ac;
+  --custom-btn-bg-hover-color: rgb(56, 128, 92);
   --dark-color: #000000;
   --p-color: #717275;
   --border-color: #e9eaeb;
 
-  --body-font-family: 'Metropolis', sans-serif;
+  --body-font-family: "Metropolis", sans-serif;
 
   --h1-font-size: 52px;
   --h2-font-size: 46px;
@@ -83,7 +82,6 @@ body {
   background-color: var(--white-color);
   font-family: var(--body-font-family);
 }
-
 
 /*---------------------------------------
   TYPOGRAPHY               
@@ -168,7 +166,6 @@ strong {
   font-weight: var(--font-weight-bold);
 }
 
-
 /*---------------------------------------
   SECTION               
 -----------------------------------------*/
@@ -191,10 +188,9 @@ strong {
   height: 100%;
 }
 
-.section-overlay+.container {
+.section-overlay + .container {
   position: relative;
 }
-
 
 /*---------------------------------------
   CUSTOM BLOCK               
@@ -208,7 +204,7 @@ strong {
 }
 
 .custom-block-wrap:hover {
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
 }
 
 .custom-block-body {
@@ -227,7 +223,6 @@ strong {
   display: block;
 }
 
-
 /*---------------------------------------
   PROGRESS BAR               
 -----------------------------------------*/
@@ -240,14 +235,12 @@ strong {
   background: var(--secondary-color);
 }
 
-
 /*---------------------------------------
   CUSTOM ICON COLOR               
 -----------------------------------------*/
 .custom-icon {
   color: var(--secondary-color);
 }
-
 
 /*---------------------------------------
   CUSTOM LIST               
@@ -262,7 +255,6 @@ strong {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-
 
 /*---------------------------------------
   CUSTOM TEXT BOX               
@@ -294,7 +286,6 @@ strong {
   line-height: 30px;
 }
 
-
 /*---------------------------------------
   AVATAR IMAGE - TESTIMONIAL, AUTHOR               
 -----------------------------------------*/
@@ -304,7 +295,6 @@ strong {
   height: 65px;
   object-fit: cover;
 }
-
 
 /*---------------------------------------
   CUSTOM BUTTON               
@@ -343,7 +333,6 @@ strong {
   border-color: transparent;
   color: var(--white-color);
 }
-
 
 /*---------------------------------------
   NAVIGATION              
@@ -403,7 +392,7 @@ strong {
 
 .dropdown-menu {
   background: var(--white-color);
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
   border: 0;
   max-width: 50px;
   padding: 0;
@@ -442,7 +431,7 @@ strong {
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-  vertical-align: -.125em;
+  vertical-align: -0.125em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
@@ -480,7 +469,8 @@ strong {
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
   transition: top 300ms 50ms ease, -webkit-transform 300ms 350ms ease;
   transition: top 300ms 50ms ease, transform 300ms 350ms ease;
-  transition: top 300ms 50ms ease, transform 300ms 350ms ease, -webkit-transform 300ms 350ms ease;
+  transition: top 300ms 50ms ease, transform 300ms 350ms ease,
+    -webkit-transform 300ms 350ms ease;
   top: 0;
 }
 
@@ -505,14 +495,15 @@ strong {
 .navbar-toggler .navbar-toggler-icon:after {
   transition: top 300ms 350ms ease, -webkit-transform 300ms 50ms ease;
   transition: top 300ms 350ms ease, transform 300ms 50ms ease;
-  transition: top 300ms 350ms ease, transform 300ms 50ms ease, -webkit-transform 300ms 50ms ease;
+  transition: top 300ms 350ms ease, transform 300ms 50ms ease,
+    -webkit-transform 300ms 50ms ease;
   position: absolute;
   right: 0;
   left: 0;
   background: var(--dark-color);
   width: 30px;
   height: 2px;
-  content: '';
+  content: "";
 }
 
 .navbar-toggler .navbar-toggler-icon::before {
@@ -522,7 +513,6 @@ strong {
 .navbar-toggler .navbar-toggler-icon::after {
   top: 8px;
 }
-
 
 /*---------------------------------------
   SITE HEADER              
@@ -552,7 +542,6 @@ strong {
   margin-right: 15px;
 }
 
-
 /*---------------------------------------
   HERO & HERO SLIDE         
 -----------------------------------------*/
@@ -577,7 +566,6 @@ strong {
   color: var(--secondary-color);
   min-width: 680px;
   min-height: 680px;
-
 }
 
 .carousel-image {
@@ -622,7 +610,6 @@ strong {
   background-color: var(--primary-color);
 }
 
-
 /*---------------------------------------
   FEATURE BLOCK              
 -----------------------------------------*/
@@ -636,7 +623,7 @@ strong {
 .featured-block:hover {
   background: var(--white-color);
   border-radius: var(--border-radius-medium);
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
 }
 
 .featured-block:hover .featured-block-image {
@@ -660,7 +647,6 @@ strong {
   transition: all 0.5s;
 }
 
-
 /*---------------------------------------
   ABOUT              
 -----------------------------------------*/
@@ -681,7 +667,6 @@ strong {
 .custom-text-block {
   padding: 60px 40px;
 }
-
 
 /*---------------------------------------
   COUNTER NUMBERS              
@@ -705,13 +690,11 @@ strong {
   line-height: normal;
 }
 
-
-
 /*---------------------------------------
  (BREADCRUMB HEAD)      
 -----------------------------------------*/
 .news-detail-header-section {
-  background-image: url('../img/texture00.jpeg');
+  background-image: url("../img/texture00.jpeg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -781,9 +764,6 @@ blockquote::before {
   line-height: 1rem;
   display: block;
 }
-
-
-
 
 /*---------------------------------------
   TESTIMONIAL CAROUSEL     (CALL TO HAJJ)   
@@ -910,7 +890,6 @@ blockquote::before {
   height: 50px;
 }
 
-
 /*---------------------------------------
   CONTACT               
 -----------------------------------------*/
@@ -936,7 +915,6 @@ blockquote::before {
   width: 100%;
 }
 
-
 /*---------------------------------------
   SITE FOOTER              
 -----------------------------------------*/
@@ -959,7 +937,7 @@ blockquote::before {
 }
 
 .site-footer-bottom a:hover {
-  color: #FF6;
+  color: #ff6;
 }
 
 .site-footer-link {
@@ -979,7 +957,6 @@ blockquote::before {
 .site-footer .custom-btn:hover {
   background: var(--primary-color);
 }
-
 
 /*---------------------------------------
   FOOTER MENU               
@@ -1003,7 +980,6 @@ blockquote::before {
   margin-right: 10px;
   margin-bottom: 5px;
 }
-
 
 /*---------------------------------------
   SOCIAL ICON               
@@ -1036,7 +1012,6 @@ blockquote::before {
   background: var(--primary-color);
   color: var(--white-color);
 }
-
 
 /*---------------------------------------
   RESPONSIVE STYLES               
@@ -1249,7 +1224,6 @@ blockquote::before {
 }
 
 @media screen and (max-width: 580px) {
-
   .hero-section-full-height,
   #hero-slide .carousel-item,
   .carousel-image {
@@ -1327,14 +1301,7 @@ blockquote::before {
   }
 }
 
-
-
-
-
 /* Adjusted CSS */
-
-
-
 
 .testimonial-section {
   background-color: #f8f9fa;
@@ -1358,7 +1325,7 @@ blockquote::before {
 
 .arabic-text {
   font-size: 28px;
-  font-family: 'Noto Naskh Arabic', serif;
+  font-family: "Noto Naskh Arabic", serif;
   /* Use a suitable font for Arabic text */
   color: var(--dark-color);
   direction: rtl;
@@ -1376,8 +1343,6 @@ blockquote::before {
 .carousel-name-title {
   font-weight: bold;
 }
-
-
 
 /* Home Landing */
 /* Start Hero Section */
@@ -1453,7 +1418,6 @@ blockquote::before {
 /* End Hero Section */
 
 /* FAQ */
-
 
 .clearfix:after {
   visibility: hidden;
@@ -1652,7 +1616,6 @@ blockquote::before {
 .card-title {
   color: var(--secondary-color);
 }
-
 
 /* Footer  */
 .site-footer-title {
