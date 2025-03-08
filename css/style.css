@@ -188,7 +188,7 @@ strong {
   height: 100%;
 }
 
-.section-overlay + .container {
+.section-overlay+.container {
   position: relative;
 }
 
@@ -223,17 +223,7 @@ strong {
   display: block;
 }
 
-/*---------------------------------------
-  PROGRESS BAR               
------------------------------------------*/
-.progress {
-  background: var(--border-color);
-  height: 5px;
-}
 
-.progress-bar {
-  background: var(--secondary-color);
-}
 
 /*---------------------------------------
   CUSTOM ICON COLOR               
@@ -1224,6 +1214,7 @@ blockquote::before {
 }
 
 @media screen and (max-width: 580px) {
+
   .hero-section-full-height,
   #hero-slide .carousel-item,
   .carousel-image {
