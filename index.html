@@ -75,22 +75,9 @@
           </div>
 
           <div class="col-lg-1 col-12 ms-auto d-lg-block d-none">
-            <ul class="social-icon list-unstyled d-flex mb-0">
-              <li class="social-icon-item">
-                <div class="dropdown">
-                  <a
-                    href="#"
-                    class="social-icon-link bi-globe"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  ></a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">English</a></li>
-                    <li><a class="dropdown-item" href="#">Swahili</a></li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
+            <a href="#" id="lang-switch" class="social-icon-link bi-globe"
+              >Switch</a
+            >
           </div>
         </div>
       </div>
@@ -435,7 +422,12 @@
             <!-- Copyright Section -->
             <div class="col-lg-6 col-md-7 col-12">
               <p class="copyright-text mb-0">
-                Copyright © 2024 Tanzania Muslim Hajj Trust
+                Copyright ©
+                <script>
+                  var CurrentYear = new Date().getFullYear();
+                  document.write(CurrentYear);
+                </script>
+                Tanzania Muslim Hajj Trust
               </p>
             </div>
 

@@ -5,11 +5,17 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# Redirect .html URLs to friendly URLs
+# Redirect .html URLs to friendly URLs (English pages)
 RewriteCond %{THE_REQUEST} \s/([^.]+)\.html [NC]
+RewriteCond %{REQUEST_URI} !-sw\.html [NC]
 RewriteRule ^ /%1 [R=301,L]
 
-# Serve friendly URLs by rewriting them to .html
+# Serve friendly URLs by rewriting them to .html (English pages)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !-sw$ [NC]
 RewriteRule ^([a-zA-Z0-9_-]+)$ $1.html [L]
+
+# Redirect Swahili friendly URLs to their .html equivalents
+RewriteCond %{REQUEST_URI} ^/(.+)-sw$ [NC]
+RewriteRule ^(.+)-sw$ $1-sw.html [L]
