@@ -29,15 +29,24 @@ document.addEventListener("DOMContentLoaded", () => {
       article.style.maxHeight = "0px";
     }
   }
-});
 
-// Language Switcher
-document.querySelectorAll(".lang-switch").forEach((switcher) => {
-  switcher.addEventListener("click", function () {
-    let currentURL = window.location.pathname;
+  // Language Switcher
+  const langSwitcher = document.querySelector(".lang-switch");
+  let currentURL = window.location.pathname;
+
+  if (currentURL.includes("-sw")) {
+    langSwitcher.dataset.lang = "en";
+    langSwitcher.querySelector("img").src = "img/flag-en.png";
+    langSwitcher.querySelector("img").alt = "English";
+  } else {
+    langSwitcher.dataset.lang = "sw";
+    langSwitcher.querySelector("img").src = "img/flag-sw.png";
+    langSwitcher.querySelector("img").alt = "Swahili";
+  }
+
+  langSwitcher.addEventListener("click", function () {
     if (this.dataset.lang === "sw") {
       // Switch to Swahili
-      if (currentURL.includes("-sw")) return;
       if (currentURL === "/" || currentURL === "/index") {
         window.location.href = "/index-sw";
       } else {
@@ -45,7 +54,6 @@ document.querySelectorAll(".lang-switch").forEach((switcher) => {
       }
     } else {
       // Switch to English
-      if (!currentURL.includes("-sw")) return;
       window.location.href = currentURL.replace("-sw", "");
     }
   });
