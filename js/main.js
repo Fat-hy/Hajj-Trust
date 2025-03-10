@@ -32,18 +32,21 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Language Switcher
-
-document.getElementById("lang-switch").addEventListener("click", function () {
-  let currentURL = window.location.pathname;
-  if (currentURL.includes("-sw")) {
-    // If in Swahili, switch to English
-    window.location.href = currentURL.replace("-sw", "");
-  } else {
-    // If in English, switch to Swahili (handle homepage as needed)
-    if (currentURL === "/" || currentURL === "/index") {
-      window.location.href = "/index-sw";
+document.querySelectorAll(".lang-switch").forEach((switcher) => {
+  switcher.addEventListener("click", function () {
+    let currentURL = window.location.pathname;
+    if (this.dataset.lang === "sw") {
+      // Switch to Swahili
+      if (currentURL.includes("-sw")) return;
+      if (currentURL === "/" || currentURL === "/index") {
+        window.location.href = "/index-sw";
+      } else {
+        window.location.href = currentURL + "-sw";
+      }
     } else {
-      window.location.href = currentURL + "-sw";
+      // Switch to English
+      if (!currentURL.includes("-sw")) return;
+      window.location.href = currentURL.replace("-sw", "");
     }
-  }
+  });
 });
