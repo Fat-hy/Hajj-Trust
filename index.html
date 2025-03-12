@@ -63,7 +63,7 @@
     <header class="site-header">
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 col-12 d-flex flex-wrap">
+          <div class="col-lg-8 col-12 d-flex flex-wrap d-none d-lg-flex">
             <p class="d-flex me-4 mb-0">
               <i class="bi-geo-alt me-2"></i>
               Dar es Salaam, Tanzania
@@ -74,11 +74,7 @@
             </p>
           </div>
 
-          <div class="col-lg-1 col-12 ms-auto d-lg-block d-none">
-            <a href="#" class="lang-switch" data-lang="">
-              <img src="" alt="" class="img-fluid" />
-            </a>
-          </div>
+          <div class="col-lg-1 col-12 ms-auto d-flex justify-content-end"></div>
         </div>
       </div>
     </header>
@@ -121,12 +117,18 @@
             <li class="nav-item">
               <a class="nav-link" href="/faqs">FAQs</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">Contact Us</a>
+            </li>
             <li class="nav-item ms-3">
               <a
-                class="nav-link custom-btn custom-border-btn btn"
-                href="/contact"
-                >Contact Us</a
+                href="#"
+                class="lang-switch nav-link custom-btn custom-border-btn btn"
+                data-lang=""
               >
+                <i class="bi bi-globe"></i>
+                <span></span>
+              </a>
             </li>
           </ul>
         </div>

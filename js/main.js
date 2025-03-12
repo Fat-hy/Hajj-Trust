@@ -32,16 +32,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Language Switcher
   const langSwitcher = document.querySelector(".lang-switch");
+  const langSwitcherSpan = langSwitcher.querySelector("span");
   let currentURL = window.location.pathname;
 
   if (currentURL.includes("-sw")) {
     langSwitcher.dataset.lang = "en";
-    langSwitcher.querySelector("img").src = "img/flag-en.png";
-    langSwitcher.querySelector("img").alt = "English";
+    langSwitcherSpan.textContent = "Change Language";
   } else {
     langSwitcher.dataset.lang = "sw";
-    langSwitcher.querySelector("img").src = "img/flag-sw.png";
-    langSwitcher.querySelector("img").alt = "Swahili";
+    langSwitcherSpan.textContent = "Badilisha Lugha";
   }
 
   langSwitcher.addEventListener("click", function () {
