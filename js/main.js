@@ -29,4 +29,31 @@ document.addEventListener("DOMContentLoaded", () => {
       article.style.maxHeight = "0px";
     }
   }
+
+  // Language Switcher
+  const langSwitcher = document.querySelector(".lang-switch");
+  const langSwitcherSpan = langSwitcher.querySelector("span");
+  let currentURL = window.location.pathname;
+
+  if (currentURL.includes("-sw")) {
+    langSwitcher.dataset.lang = "en";
+    langSwitcherSpan.textContent = "Change Language";
+  } else {
+    langSwitcher.dataset.lang = "sw";
+    langSwitcherSpan.textContent = "Badilisha Lugha";
+  }
+
+  langSwitcher.addEventListener("click", function () {
+    if (this.dataset.lang === "sw") {
+      // Switch to Swahili
+      if (currentURL === "/" || currentURL === "/index") {
+        window.location.href = "/index-sw";
+      } else {
+        window.location.href = currentURL + "-sw";
+      }
+    } else {
+      // Switch to English
+      window.location.href = currentURL.replace("-sw", "");
+    }
+  });
 });

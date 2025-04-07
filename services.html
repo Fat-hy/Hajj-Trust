@@ -103,17 +103,24 @@
             <li class="nav-item">
               <a class="nav-link" href="/faqs">FAQs</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">Contact Us</a>
+            </li>
             <li class="nav-item ms-3">
               <a
-                class="nav-link custom-btn custom-border-btn btn"
-                href="/contact"
-                >Contact Us</a
+                href="#"
+                class="lang-switch nav-link custom-btn custom-border-btn btn"
+                data-lang=""
               >
+                <i class="bi bi-globe"></i>
+                <span></span>
+              </a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+
     <main>
       <!-- Hero Section -->
       <section class="news-detail-header-section text-center">
@@ -301,9 +308,9 @@
           <h3>Step 3: Proceed with Payment</h3>
           <p>
             After confirming availability, proceed with the payment process. You
-            can make payments through our banking systems, and transactions can
-            be made in both TZS (Tanzanian Shillings) and USD (United States
-            Dollars).
+            can make payments through our Tanzanian bank accounts which are
+            Amana Bank and CRDB Bank respectively, and transactions can be made
+            in both TZS (Tanzanian Shillings) and USD (United States Dollars).
           </p>
         </div>
 
@@ -455,7 +462,12 @@
             <!-- Copyright Section -->
             <div class="col-lg-6 col-md-7 col-12">
               <p class="copyright-text mb-0">
-                Copyright © 2024 Tanzania Muslim Hajj Trust
+                Copyright ©
+                <script>
+                  var CurrentYear = new Date().getFullYear();
+                  document.write(CurrentYear);
+                </script>
+                Tanzania Muslim Hajj Trust
               </p>
             </div>
 
@@ -492,5 +504,6 @@
     <script src="js/jquery.sticky.js"></script>
     <script src="js/counter.js"></script>
     <script src="js/custom.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
