@@ -586,7 +586,7 @@
   <footer class="site-footer text-white pt-lg-5">
     <div class="container">
       <div class="row justify-content-between">
-        <!-- Sehemu ya Nembo -->
+        <!-- Sehemu ya Logo -->
         <div class="col-lg-3 col-md-4 col-12 mb-4">
           <img src="img/Hajjtrust-Logo-offwhite.svg" class="logo img-fluid" alt="Nembo" />
         </div>
@@ -596,13 +596,13 @@
           <h5 class="site-footer-title">Viungo vya Haraka</h5>
           <ul class="list-unstyled">
             <li>
-              <a href="faqs" class="footer-menu-link text-decoration-none">FAQ</a>
+              <a href="faqs-sw" class="footer-menu-link text-decoration-none">Msaada</a>
             </li>
             <li>
-              <a href="/contact" class="footer-menu-link text-decoration-none">Wasiliana</a>
+              <a href="/contact-sw" class="footer-menu-link text-decoration-none">Wasiliana Nasi</a>
             </li>
             <li>
-              <a href="/services" class="footer-menu-link text-decoration-none">Huduma</a>
+              <a href="/services-sw" class="footer-menu-link text-decoration-none">Huduma Zetu</a>
             </li>
           </ul>
         </div>
@@ -612,18 +612,19 @@
           <h5 class="site-footer-title">Gundua</h5>
           <ul class="list-unstyled">
             <li>
-              <a href="/services#hajj-package" class="footer-menu-link text-decoration-none">Kifurushi cha Hajj</a>
+              <a href="/services-sw#hajj-package" class="footer-menu-link text-decoration-none">Kifurushi cha Hajj</a>
+            </li>
+
+            <li>
+              <a href="/services-sw#proxy-package" class="footer-menu-link text-decoration-none">Hajj kwa Niaba</a>
             </li>
             <li>
-              <a href="/services#proxy-package" class="footer-menu-link text-decoration-none">Kifurushi cha Wakala</a>
-            </li>
-            <li>
-              <a href="/about" class="footer-menu-link text-decoration-none">Kuhusu Sisi</a>
+              <a href="/about-sw" class="footer-menu-link text-decoration-none">Kuhusu Sisi</a>
             </li>
           </ul>
         </div>
 
-        <!-- Sehemu ya Taarifa za Mawasiliano -->
+        <!-- Sehemu ya Mawasiliano -->
         <div class="col-lg-3 col-md-6 col-12 mb-4">
           <h5 class="site-footer-title">Taarifa za Mawasiliano</h5>
           <p>
@@ -639,8 +640,7 @@
             <a href="mailto:info@hajjtrust.co.tz" class="text-decoration-none">info@hajjtrust.co.tz</a>
           </p>
           <p>
-            <i class="bi-geo-alt me-2"></i>
-            S.L.P 4907, Dar es Salaam, Tanzania
+            <i class="bi-geo-alt me-2"></i> S.L.P 4907, Dar es Salaam, Tanzania
           </p>
         </div>
       </div>
@@ -649,16 +649,21 @@
     <!-- Sehemu ya Chini ya Footer -->
     <div class="site-footer-bottom">
       <div class="container">
-        <div class="row align-items-center">
-          <!-- Sehemu ya Hakimiliki -->
-          <div class="col-lg-4 col-md-4 col-12">
+        <div class="row">
+          <!-- Haki Miliki -->
+          <div class="col-lg-6 col-md-7 col-12">
             <p class="copyright-text mb-0">
-              Hakimiliki © 2024 Tanzania Muslim Hajj Trust
+              Haki miliki ©
+              <script>
+                var CurrentYear = new Date().getFullYear();
+                document.write(CurrentYear);
+              </script>
+              Tanzania Muslim Hajj Trust
             </p>
           </div>
 
-          <!-- Sehemu ya Mitandao ya Kijamii -->
-          <div class="col-lg-4 col-md-4 col-12 d-flex justify-content-center align-items-center">
+          <!-- Mitandao ya Kijamii -->
+          <div class="col-lg-6 col-md-5 col-12 d-flex justify-content-center align-items-center">
             <ul class="social-icon list-unstyled d-flex mb-0">
               <li class="social-icon-item me-3">
                 <a href="#" class="social-icon-link bi-twitter"></a>
@@ -676,21 +681,6 @@
                 <a href="#" class="social-icon-link bi-youtube"></a>
               </li>
             </ul>
-          </div>
-
-          <!-- Sehemu ya Kibadilisha Lugha -->
-          <div class="col-lg-4 col-md-4 col-12 d-flex justify-content-end align-items-center">
-            <div class="language-switcher d-flex align-items-center">
-              <i class="bi-globe me-2"></i>
-              <ul class="nav">
-                <li class="nav-item">
-                  <a href="#" class="nav-link text-white">English</a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link text-white active" aria-current="page">Swahili</a>
-                </li>
-              </ul>
-            </div>
           </div>
         </div>
       </div>

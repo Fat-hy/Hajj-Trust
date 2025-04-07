@@ -4,46 +4,47 @@ document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("whatsappForm");
   let currentURL = window.location.pathname;
 
-  // Detect the current language based on the URL
+  // Detect current language
   let currentLang = currentURL.includes("-sw") ? "sw" : "en";
 
-  // Set the language switcher text accordingly
-  if (currentLang === "sw") {
-    langSwitcher.dataset.lang = "sw";
-    langSwitcherSpan.textContent = "Badilisha Lugha";
-  } else {
-    langSwitcher.dataset.lang = "en";
-    langSwitcherSpan.textContent = "Change Language";
+  // Set language switcher text
+  function setSwitcherText() {
+    if (currentLang === "sw") {
+      langSwitcher.dataset.lang = "sw";
+      langSwitcherSpan.textContent = "Badilisha Lugha";
+    } else {
+      langSwitcher.dataset.lang = "en";
+      langSwitcherSpan.textContent = "Change Language";
+    }
   }
+  setSwitcherText();
 
-  // Function to update content based on language
+  // Update page text/placeholders based on language
   function updateLanguage() {
     document.querySelectorAll("[data-en], [data-sw]").forEach((element) => {
-      if (element.dataset[currentLang]) {
-        if (element.placeholder) {
-          element.placeholder = element.dataset[currentLang];
-        }
-        if (element.textContent !== undefined) {
-          element.textContent = element.dataset[currentLang];
-        }
+      const text = element.dataset[currentLang];
+      if (!text) return;
+
+      if (
+        element.tagName === "INPUT" ||
+        element.tagName === "TEXTAREA" ||
+        element.hasAttribute("placeholder")
+      ) {
+        element.placeholder = text;
+      } else {
+        element.textContent = text;
       }
     });
   }
+  updateLanguage();
 
-  // Listen for language switcher click
+  // Handle language switcher click
   langSwitcher.addEventListener("click", function () {
-    if (currentLang === "sw") {
-      currentLang = "en";
-      langSwitcher.dataset.lang = "en";
-      langSwitcherSpan.textContent = "Change Language";
-    } else {
-      currentLang = "sw";
-      langSwitcher.dataset.lang = "sw";
-      langSwitcherSpan.textContent = "Badilisha Lugha";
-    }
+    currentLang = currentLang === "sw" ? "en" : "sw";
+    setSwitcherText();
     updateLanguage();
 
-    // Change the URL based on the language
+    // Change URL based on new language
     if (currentLang === "sw") {
       if (currentURL === "/" || currentURL === "/index") {
         window.location.href = "/index-sw";
@@ -55,25 +56,23 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Initialize language content based on the detected language on page load
-  updateLanguage();
-
-  // Handle the form submission
+  // Form submission handling
   form.addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent the form from submitting the traditional way
+    event.preventDefault();
 
-    // Gather form values
+    // Collect values
     const firstName = document.getElementById("first-name").value.trim();
     const lastName = document.getElementById("last-name").value.trim();
     const email = document.getElementById("email").value.trim();
     const region = document.getElementById("region").value.trim();
     const message = document.getElementById("message").value.trim();
 
-    // Form validation
-    let hasError = false;
+    // Clear previous errors
     document
       .querySelectorAll(".text-danger")
       .forEach((el) => (el.textContent = ""));
+
+    let hasError = false;
 
     if (!firstName) {
       document.getElementById("error-first-name").textContent =
@@ -105,21 +104,20 @@ document.addEventListener("DOMContentLoaded", function () {
       hasError = true;
     }
 
-    if (hasError) return; // Stop the submission if there are errors
+    if (hasError) return;
 
-    // Format message for WhatsApp
+    // Prepare WhatsApp message
     let fullMessage = `Assalam Alaykum, my name is ${firstName} ${lastName}. I am from ${region}.`;
     if (email) {
       fullMessage += ` My email is ${email}.`;
     }
     fullMessage += ` Message: ${message}`;
 
-    const phoneNumber = "255745411691"; // Replace with your WhatsApp number
+    const phoneNumber = "255745411691";
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
       fullMessage
     )}`;
 
-    // Redirect to WhatsApp to send the message
     alert(
       currentLang === "sw"
         ? "Utaelekezwa kwenye WhatsApp kutuma ujumbe wako."
