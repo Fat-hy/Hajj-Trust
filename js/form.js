@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     fullMessage += ` Message: ${message}`;
 
-    const phoneNumber = "255745411691";
+    const phoneNumber = "255754762768";
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
       fullMessage
     )}`;
